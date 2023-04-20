@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
         version="0.0.1",
         author="",
         author_email="",
-        description="Anthropomophization labeler",
+        description="Anthrpomorphization labeler",
         long_description=long_description,
         long_description_content_type="text/markdown",
         packages=setuptools.find_packages(),

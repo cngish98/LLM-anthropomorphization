@@ -1,0 +1,13 @@
+start = data   # change to <dataset> (or something) when we put all the <data> elements together
+data = element data { url, source, authors, title, date, description, main_text, tags? }
+url = element url { text } 
+source = element source { type, text }
+type = attribute type { "news" | "podcast" | "academic" | "video" | "blog"}
+authors = element authors { author+ }   # one or more authors
+author = element author { text }
+title = element title { text }
+date = element date { xsd:date }   # YYYY-MM-DD
+description = element description { text }
+main_text = element main_text { text }
+tags = element tags { tag+ }
+tag = element tag { text } 

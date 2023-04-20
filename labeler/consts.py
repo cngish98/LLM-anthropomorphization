@@ -1,6 +1,5 @@
 ANTHROPOMORPHIC_VERBS = [
     "understand",
-    "hallucinate",
     "sympathize",
     "empathize",
     "communicate",
@@ -41,4 +40,5 @@ MODEL_LEXICON = [
     "bard",  # google's chatgpt competitor
     "cgpt",
     "plm",  # pre-trained language models
+    "auto-gpt",
 ]

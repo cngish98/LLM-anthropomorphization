@@ -1,9 +1,12 @@
 # Data Sources
 
 Data was collected via manual copy and paste as well as automated scraping from sources such as NPR, The New York Times,
-The Atlantic, the Washington Post, Fox News, Wired, Slate, etc. 
+The Atlantic, the Washington Post, Fox News, Wired, Slate, etc.
 
 For copyright reasons, the exact data is not provided but the code to implement scraping on your own is included.
+
+The XML template is also included here as `template_schema.rnc`. We have a `tags` element but there wasn't enough data
+for us to use it. 
 
 ## To Use Scraper
 
@@ -44,22 +47,24 @@ run with
 - Tom's Guide
 - Financial Review
 - Business Insider
-- Eater 
+- Eater
 
 ### Works with Bugs
+
 - Daily Mail - misses random chunks of main text
 - Fox News - does not grab date
 - Medium - does not grab description (subheading/subtitle)
-- Futurism - doesn't seem to grab authors or date 
+- Futurism - doesn't seem to grab authors or date
 - Gizmodo - missing author
 - Yahoo! - missing date
 - Politico - struggles with author
 - Reuters - missing author
-- Harvard Business Review - missing author 
+- Harvard Business Review - missing author
 - Washington Post - missing description
 - CBS News - missing date
 
-### Requires Manual Text Substitution 
+### Requires Manual Text Substitution
+
 - NYT - will only grab a section of the text & will need to do the workaround to get the full text; does not pick up
   summaries either
   To get all body text in browser, go to Console in browser and enter:
@@ -70,10 +75,11 @@ run with
 - MIT Technology Review - does not pull full text
 
 ### Crashes & Burns
-- CNN - cannot find anything 
+
+- CNN - cannot find anything
 - Wired - cannot find anything
-- Slate - cannot find anything 
-- Mark Tech Post - cannot find anything 
+- Slate - cannot find anything
+- Mark Tech Post - cannot find anything
 - Wall Street Journal - 403
 - Forbes - 403
 - Inc. - 403

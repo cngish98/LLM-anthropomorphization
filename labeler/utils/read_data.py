@@ -30,7 +30,6 @@ class XMLFormatter:
             date = root[4].text
             description = root[5].text
             main_text = root[6].text
-            tags = root[7]
 
             text = {
                 "url": url,
@@ -43,7 +42,6 @@ class XMLFormatter:
                 else None,
                 "description": description,
                 "main_text": re.sub(r"\s{2,}", "", main_text.replace("\n", "")),
-                "tags": [tag.text for tag in tags],
             }
 
             text_collection[doc_count] = text

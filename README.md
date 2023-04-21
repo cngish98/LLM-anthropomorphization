@@ -18,9 +18,6 @@ To install packages:
 conda env create --name llm --file environment.yml 
 ```
 
-As a one-time action, make sure to install CoreNLP. The simplest way will be to run `stanza.install_corenlp()` but other
-options can be found in their [documentation](https://stanfordnlp.github.io/stanza/client_setup.html).
-
 To install the project:
 
 ```
@@ -30,3 +27,9 @@ pip install -e .
 ## Development
 
 Code is formatted with `black`. 
+
+To update enivornment.yml after changing dependencies, run `conda env export environment.yml`
+
+## Data 
+
+For information about the data we used and how to retrieve it yourself, see [scraper](/scraper).

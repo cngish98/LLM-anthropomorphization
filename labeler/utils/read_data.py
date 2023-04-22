@@ -1,3 +1,4 @@
+import logging
 import re
 
 from datetime import datetime
@@ -14,8 +15,8 @@ class XMLFormatter:
         self.data_dir = data_dir
 
     def read_xmls(self):
-        print("in read")
-        text_collection = {}
+        logging.info(f"Beginning to read in data from {self.data_dir}...")
+        text_collection = []
         doc_count = 0
         parser = etree.XMLParser(remove_comments=True)
 
@@ -32,6 +33,7 @@ class XMLFormatter:
             main_text = root[6].text
 
             text = {
+                "id": doc_count,
                 "url": url,
                 "source": source,
                 "source_type": source_type,
@@ -44,8 +46,7 @@ class XMLFormatter:
                 "main_text": re.sub(r"\s{2,}", "", main_text.replace("\n", "")),
             }
 
-            text_collection[doc_count] = text
-
+            text_collection.append(text)
             doc_count += 1
 
         return text_collection

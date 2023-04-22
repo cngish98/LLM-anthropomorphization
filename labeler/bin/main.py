@@ -27,3 +27,4 @@ if __name__ == "__main__":
     # access data by finding data[index]['resolved_text'], no splitting has been done yet
     # beware - this process takes a while. i'll look into optimizaiton/parallelization but for now, it took me
     # about 10 minutes to run the 18 podcast documents
+    # definitely works better with short sentences & podcast format is probably a little extra weird

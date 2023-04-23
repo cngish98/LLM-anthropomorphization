@@ -9,9 +9,17 @@ from labeler.utils.parse_data import TextSplitter
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="LLM Anthropomorphization")
     parser.add_argument("-d", "--data", required=True, help="directory to scraped data")
+    parser.add_argument(
+        "-p",
+        "--process",
+        required=True,
+        choices=["baseline", "model"],
+        help="process to run",
+    )
 
     args = parser.parse_args()
     data_dir = args.data
+    process = args.process
 
     logging.info(f"arg - data directory: {data_dir}")
 
@@ -39,3 +47,19 @@ if __name__ == "__main__":
         data_split.extend(doc_list)
     logging.info(f"Collection length after splitting: {len(data_split)}")
     logging.info(f"Orig length after splitting: {len(data)}")
+
+    logging.info("Beginning passive check...")
+    # to do - add passive details here
+    logging.info("Passive check complete")
+
+    if process == "baseline":
+        # lemmatiziation
+        # semantic role labeling
+        # baseline evaluation
+        pass
+    elif process == "model":
+        # preprocess
+        # train/test split
+        # model - scores
+        # evaluation
+        pass

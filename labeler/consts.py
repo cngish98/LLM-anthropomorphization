@@ -17,12 +17,28 @@ ANTHROPOMORPHIC_VERBS = [
     "admit",
 ]
 
+ANTHROPOMORPHIC_MULTIWORD_EXPRESSIONS = [
+    "is coming for",
+    "mess with",
+    "come up with",
+    "gets me",
+    "goes rogue",
+    "figure out",
+    "have an identity crisis",
+]
+
 MAYBE_VERBS = [
     "learn",
     "choose",
     "decide",
     "deduce",
     "determine",
+]
+
+MAGIC_WORDS = [
+    "divine",
+    "alchemy",
+    "magic",
 ]
 
 MODEL_LEXICON = [

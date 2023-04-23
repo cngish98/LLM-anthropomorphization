@@ -53,11 +53,15 @@ if __name__ == "__main__":
     logging.info("Passive check complete")
 
     if process == "baseline":
+        logging.info("Running baseline predictions...")
+
         # lemmatiziation
         # semantic role labeling
         # baseline evaluation
         pass
     elif process == "model":
+        logging.info("Running model predictions...")
+
         # preprocess
         # train/test split
         # model - scores

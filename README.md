@@ -24,17 +24,16 @@ To install the project:
 pip install -e .
 ```
 
+## Development
+
+Code is formatted with `black`. 
+
+
 To add required packages to the environment.yml
 
 ```commandline
 conda env export > environment.yml --no-builds
 ```
-
-## Development
-
-Code is formatted with `black`. 
-
-To update enivornment.yml after changing dependencies, run `conda env export environment.yml`
 
 ## Data 
 

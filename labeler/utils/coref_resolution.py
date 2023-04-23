@@ -1,5 +1,7 @@
-from fastcoref import LingMessCoref, spacy_component
+from fastcoref import LingMessCoref, FCoref, spacy_component
 import spacy
+
+# library documentation: https://github.com/shon-otmazgin/fastcoref
 
 
 class CorefResolution:
@@ -7,7 +9,7 @@ class CorefResolution:
         self.text = text
 
     def resolve_coreferences(self):
-        model = LingMessCoref(device="mps")
+        model = FCoref(device="mps")
 
         nlp = spacy.load("en_core_web_sm")
         nlp.add_pipe("fastcoref")

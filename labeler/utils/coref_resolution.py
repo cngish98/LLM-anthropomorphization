@@ -1,4 +1,7 @@
-from fastcoref import LingMessCoref, FCoref, spacy_component
+from fastcoref import FCoref, spacy_component
+# from fastcoref import LingMessCoref, spacy_component
+# LingMessCoref is a more accurate coreference resolution implementation, but it takes much longer to run
+# spacy_component is required with both libraries even though it is not directly called anywhere
 import spacy
 
 # library documentation: https://github.com/shon-otmazgin/fastcoref

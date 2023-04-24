@@ -43,7 +43,7 @@ class XMLFormatter:
                 if date is not None
                 else None,
                 "description": description,
-                "main_text": re.sub(r"\s{2,}", "", main_text.replace("\n", "")),
+                "main_text": re.sub(r"\s{2,}", " ", main_text.replace("\n\n", ". ")),
             }
 
             text_collection.append(text)

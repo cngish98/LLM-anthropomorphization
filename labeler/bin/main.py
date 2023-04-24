@@ -1,6 +1,7 @@
 import argparse
 import logging
 
+from labeler.baseline import AnthropomorphizationAnalyzer
 from labeler.utils.read_data import XMLFormatter
 from labeler.utils.coref_resolution import CorefResolution
 from labeler.utils.parse_data import TextSplitter
@@ -51,10 +52,10 @@ if __name__ == "__main__":
 
     if process == "baseline":
         logging.info("Running baseline predictions...")
-        # lemmatiziation
-        # semantic role labeling
-        # baseline evaluation
-        pass
+        anthrop_sentences = AnthropomorphizationAnalyzer(data_split).evaluate_text()
+        for index, flagged_sentence in enumerate(anthrop_sentences):
+            print(index, flagged_sentence["id"], flagged_sentence["sentence"])
+        print(len(anthrop_sentences))
     elif process == "model":
         logging.info("Running model predictions...")
         # preprocess

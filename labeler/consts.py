@@ -16,7 +16,7 @@ ANTHROPOMORPHIC_VERBS = [
     "imagine",
     "admit",
     "kill",
-    "believe"
+    "believe",
 ]
 
 ANTHROPOMORPHIC_MULTIWORD_EXPRESSIONS = [

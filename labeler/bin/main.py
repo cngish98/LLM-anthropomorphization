@@ -1,9 +1,11 @@
 import argparse
 import logging
 
+from labeler.baseline import AnthropomorphizationAnalyzer
 from labeler.utils.read_data import XMLFormatter
 from labeler.utils.coref_resolution import CorefResolution
 from labeler.utils.parse_data import TextSplitter
+from labeler.utils.passivity_check import PassiveChecker
 
 
 if __name__ == "__main__":
@@ -34,11 +36,6 @@ if __name__ == "__main__":
         ).resolve_coreferences()
     logging.info("Coreference resolution complete")
 
-    # access data by finding data[index]['resolved_text'], no splitting has been done yet
-    # beware - this process takes a while. i'll look into optimizaiton/parallelization but for now, it took me
-    # about 10 minutes to run the 18 podcast documents
-    # definitely works better with short sentences & podcast format is probably a little extra weird
-
     logging.info("Splitting sentences...")
     logging.info(f"Collection length at start: {len(data)}")
     data_split = []
@@ -46,22 +43,21 @@ if __name__ == "__main__":
         doc_list = TextSplitter(document).split_into_sentences()
         data_split.extend(doc_list)
     logging.info(f"Collection length after splitting: {len(data_split)}")
-    logging.info(f"Orig length after splitting: {len(data)}")
 
     logging.info("Beginning passive check...")
-    # to do - add passive details here
+    for index, document in enumerate(data_split):
+        data_split[index] = PassiveChecker(document).check_for_passives()
     logging.info("Passive check complete")
+    print(data_split)
 
     if process == "baseline":
         logging.info("Running baseline predictions...")
-
-        # lemmatiziation
-        # semantic role labeling
-        # baseline evaluation
-        pass
+        anthrop_sentences = AnthropomorphizationAnalyzer(data_split).evaluate_text()
+        for index, flagged_sentence in enumerate(anthrop_sentences):
+            print(index, flagged_sentence["id"], flagged_sentence["sentence"])
+        print(len(anthrop_sentences))
     elif process == "model":
         logging.info("Running model predictions...")
-
         # preprocess
         # train/test split
         # model - scores

@@ -48,14 +48,20 @@ if __name__ == "__main__":
     for index, document in enumerate(data_split):
         data_split[index] = PassiveChecker(document).check_for_passives()
     logging.info("Passive check complete")
-    print(data_split)
+
+    logging.info("Running baseline predictions...")
+    anthrop_sentences, doc_list = AnthropomorphizationAnalyzer(
+        data_split
+    ).evaluate_text()
+    for index, flagged_sentence in enumerate(anthrop_sentences):
+        print(index, flagged_sentence["id"], flagged_sentence["sentence"])
+    print(len(anthrop_sentences))
+    print(
+        doc_list
+    )  # this is the full list and includes a `anthrop_label` in each dict that will be 1 if flagged
 
     if process == "baseline":
-        logging.info("Running baseline predictions...")
-        anthrop_sentences = AnthropomorphizationAnalyzer(data_split).evaluate_text()
-        for index, flagged_sentence in enumerate(anthrop_sentences):
-            print(index, flagged_sentence["id"], flagged_sentence["sentence"])
-        print(len(anthrop_sentences))
+        logging.info("Baseline evaluation complete")
     elif process == "model":
         logging.info("Running model predictions...")
         # preprocess

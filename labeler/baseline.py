@@ -13,6 +13,7 @@ class AnthropomorphizationAnalyzer:
         logging.info("Beginning rule-based evaluation...")
 
         for index, doc_dict in enumerate(self.doc_list):
+            self.doc_list[index]["anthrop_label"] = 0
             if doc_dict["passive"] == 0:
                 logging.info("Sentence is active, continuing check...")
                 if any(word in doc_dict["sentence"] for word in ANTHROPOMORPHIC_VERBS):
@@ -22,7 +23,6 @@ class AnthropomorphizationAnalyzer:
                     if any(word in doc_dict["sentence"] for word in MODEL_LEXICON):
                         logging.info("Sentence contains model lexicon, adding to list")
                         anthropomorphic_sentences.append(doc_dict)
+                        self.doc_list[index]["anthrop_label"] = 1
 
-        # once this is complete, add to original dict
-
-        return anthropomorphic_sentences
+        return anthropomorphic_sentences, self.doc_list

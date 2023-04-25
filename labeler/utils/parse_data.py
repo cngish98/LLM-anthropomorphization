@@ -17,7 +17,7 @@ class TextSplitter:
 
         for i, sentence in enumerate(text):
             new_dict = copy.deepcopy(self.full_dict)
-            new_dict["id"] = f"{self.full_dict['id']}-s{i}"
+            new_dict["id"] = f"news-{self.full_dict['id']}-s{i}"
             new_dict["sentence"] = sentence
             del new_dict["main_text"]
             del new_dict["resolved_text"]

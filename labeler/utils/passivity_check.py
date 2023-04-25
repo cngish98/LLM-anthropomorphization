@@ -4,15 +4,19 @@ from PassivePySrc import PassivePy
 
 
 class PassiveChecker:
-    def __init__(self, dict):
-        self.dict = dict
+    def __init__(self, df):
+        self.df = df
 
     def check_for_passives(self):
         passivepy = PassivePy.PassivePyAnalyzer(spacy_model="en_core_web_sm")
 
-        df = passivepy.match_text(
-            self.dict["sentence"], full_passive=True, truncated_passive=True
+        df = passivepy.match_sentence_level(
+            self.df,
+            column_name="sentence",
+            batch_size=1000,
+            full_passive=True,
+            truncated_passive=True,
         )
-        self.dict["passive"] = df["binary"].item()
+        df = df.drop(columns=["sentenceId", "docId"])
 
-        return self.dict
+        return df

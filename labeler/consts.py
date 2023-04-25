@@ -53,6 +53,7 @@ MODEL_LEXICON = [
     "gpt4",
     "gpt-2",
     "gpt-3",
+    "gpt-3.5",
     "gpt-4",
     "chatbot",
     "model",  # should include large language model, language model

@@ -54,7 +54,7 @@ if __name__ == "__main__":
         logging.info(
             f"Baseline identified {len(anthrop_sentences_df)} anthropomorphic sentences"
         )
-        anthrop_sentences_df.to_csv("../../anthrop_sentences.csv", index=False)
+        anthrop_sentences_df.to_csv("../../anthrop_sentences_withlemma.csv", index=False)
     elif process == "model":
         logging.info("Running model predictions...")
         # preprocess

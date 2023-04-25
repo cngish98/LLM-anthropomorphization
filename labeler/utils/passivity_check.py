@@ -13,7 +13,7 @@ class PassiveChecker:
         df = passivepy.match_sentence_level(
             self.df,
             column_name="sentence",
-            batch_size=2000,
+            batch_size=1000,
             full_passive=True,
             truncated_passive=True,
         )

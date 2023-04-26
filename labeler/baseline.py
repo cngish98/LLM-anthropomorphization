@@ -2,12 +2,12 @@ import logging
 
 import spacy
 
-from .consts import ANTHROPOMORPHIC_VERBS, MODEL_LEXICON
+from .consts import ANTHROPOMORPHIC_WORDS, MODEL_LEXICON
 
 
 def filters(df):
     if df["binary"] == 0:
-        if any(word in df["parsed_sentences"] for word in ANTHROPOMORPHIC_VERBS):
+        if any(word in df["parsed_sentences"] for word in ANTHROPOMORPHIC_WORDS):
             if any(word in df["parsed_sentences"] for word in MODEL_LEXICON):
                 return 1
     return 0

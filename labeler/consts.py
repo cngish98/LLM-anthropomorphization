@@ -1,4 +1,4 @@
-ANTHROPOMORPHIC_VERBS = [
+ANTHROPOMORPHIC_WORDS = [
     "understand",
     "sympathize",
     "empathize",
@@ -18,6 +18,8 @@ ANTHROPOMORPHIC_VERBS = [
     "kill",
     "believe",
     "exaggerate",
+    "lie",
+    "threaten",
 ]
 
 ANTHROPOMORPHIC_MULTIWORD_EXPRESSIONS = [

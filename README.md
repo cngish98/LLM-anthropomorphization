@@ -8,6 +8,13 @@ LING 472 / ANLY 521 Final Project | Spring 2023
 
 ### [Presentation Slides](https://docs.google.com/presentation/d/1goQKjHUAjKexrbL4J1h_FJL5pZiMgEDOUCAEMbnUXoI/edit#slide=id.p)
 
+This project studies the issue of anthropomorphization of large language models and AI by classifiying individual
+sentences as either anthropomorphic or not.
+
+There is a rudimentary rule-based baseline model and a fine-tuned BERT-based model. While the code for the model is
+included in the package, it is likely you will need additional compute to run the modeling. The colab notebook is
+included to run the model in Google Colab.
+
 ## Development
 
 ### Set up & Installation
@@ -50,7 +57,7 @@ python main.py --data <data> --process <baseline,model> --export
 - [required] `data` is the location of your data files
 - [required] `process` indicates whether you want to run the baseline labeler or model labeler. for the model labeler,
   baseline is
-  still run first.
+  still run fgit irst.
 - [optional] `export` will write baseline output to csv
 
 For example, this command runs the baseline labeler against the labeled data in our private repository and will not

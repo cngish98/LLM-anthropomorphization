@@ -19,7 +19,6 @@ ANTHROPOMORPHIC_WORDS = [
     "believe",
     "exaggerate",
     "lie",
-    "threaten",
 ]
 
 ANTHROPOMORPHIC_MULTIWORD_EXPRESSIONS = [
@@ -33,11 +32,11 @@ ANTHROPOMORPHIC_MULTIWORD_EXPRESSIONS = [
 ]
 
 MAYBE_VERBS = [
-    "learn",
     "choose",
     "decide",
     "deduce",
     "determine",
+    "identify",
 ]
 
 MAGIC_WORDS = [

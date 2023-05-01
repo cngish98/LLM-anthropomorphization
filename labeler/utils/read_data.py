@@ -7,9 +7,6 @@ from pathlib import Path
 from lxml import etree
 
 
-# TO DO need to update this - the reading breaks on empty tags but iterparse might work better and wil lneed to adjust.
-
-
 class XMLFormatter:
     def __init__(self, data_dir):
         self.data_dir = data_dir

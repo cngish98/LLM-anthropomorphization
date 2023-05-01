@@ -25,5 +25,5 @@ class AnthropomorphizationAnalyzer:
             lambda x: [y.lemma_ for y in nlp(x.lower())]
         )
         logging.info("Applying filters...")
-        self.df["baseline_label"] = self.df.apply(filters, axis=1)
+        self.df["label"] = self.df.apply(filters, axis=1)
         return self.df

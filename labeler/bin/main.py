@@ -47,10 +47,17 @@ if __name__ == "__main__":
 
     logging.info("Beginning passive check...")
     all_sentences_df = PassiveChecker(all_sentences).check_for_passives_df()
+    # columns: 'sentences', 'all_passives', 'all_passives_count', 'binary', 'full_passive_matches',
+    # 'raw_full_passive_count', 'binary_full_passive', 'truncated_passive_matches', 'raw_truncated_passive_count',
+    # 'binary_truncated_passive', 'id', 'url', 'source', 'source_type', 'authors', 'title', 'date', 'gold_label'
     logging.info("Passive check complete")
 
     logging.info("Running baseline predictions...")
     all_sentences_df = AnthropomorphizationAnalyzer(all_sentences_df).evaluate_text()
+    # columns: 'sentences', 'all_passives', 'all_passives_count', 'binary', 'full_passive_matches',
+    # 'raw_full_passive_count', 'binary_full_passive', 'truncated_passive_matches', 'raw_truncated_passive_count',
+    # 'binary_truncated_passive', 'id', 'url', 'source', 'source_type', 'authors', 'title', 'date', 'gold_label',
+    # 'baseline_label'
     logging.info("Baseline predictions complete and added to column 'label'")
 
     if process == "baseline":

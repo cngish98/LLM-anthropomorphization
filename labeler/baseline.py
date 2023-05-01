@@ -14,16 +14,16 @@ def filters(df):
 
 
 class AnthropomorphizationAnalyzer:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, df):
+        self.df = df
 
     def evaluate_text(self):
         logging.info("Beginning rule-based evaluation...")
         nlp = spacy.load("en_core_web_sm")
         logging.info("Lemmatizing sentences...")
-        self.data["parsed_sentences"] = self.data["sentences"].apply(
+        self.df["parsed_sentences"] = self.df["sentences"].apply(
             lambda x: [y.lemma_ for y in nlp(x.lower())]
         )
         logging.info("Applying filters...")
-        self.data["label"] = self.data.apply(filters, axis=1)
-        return self.data
+        self.df["label"] = self.df.apply(filters, axis=1)
+        return self.df

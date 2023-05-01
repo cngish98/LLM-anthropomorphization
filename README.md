@@ -6,7 +6,7 @@ LING 472 / ANLY 521 Final Project | Spring 2023
 
 ## Background
 
-### [Presentation Slides](https://docs.google.com/presentation/d/1goQKjHUAjKexrbL4J1h_FJL5pZiMgEDOUCAEMbnUXoI/edit#slide=id.p)
+### [Presentation Slides](https://docs.google.com/presentation/d/1ZHLGu2YBoXJVcdEjcOy1eXtJxd5EY-3f_f3NjuFypEo/edit?usp=sharing)
 
 ## Development
 
@@ -59,4 +59,3 @@ write the baseline labeled output to csv.
 ```commandline
 python main.py -d ../../../llm-data/labeled-data/ -p baseline
 ```
-

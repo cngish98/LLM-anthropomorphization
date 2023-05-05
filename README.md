@@ -13,7 +13,9 @@ sentences as either anthropomorphic or not.
 
 There is a rudimentary rule-based baseline model and a fine-tuned BERT-based model. While the code for the model is
 included in the package, it is likely you will need additional compute to run the modeling. The colab notebook is
-included to run the model in Google Colab.
+included to run the model in Google Colab. 
+
+You can download the [llm_anthro_detection model](https://huggingface.co/jc-cl-cg/llm_anthro_detection) from Hugging Face
 
 ## Development
 

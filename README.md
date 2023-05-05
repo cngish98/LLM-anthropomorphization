@@ -15,7 +15,7 @@ There is a rudimentary rule-based baseline model and a fine-tuned BERT-based mod
 included in the package, it is likely you will need additional compute to run the modeling. The colab notebook is
 included to run the model in Google Colab. 
 
-You can download the [llm_anthro_detection model](https://huggingface.co/jc-cl-cg/llm_anthro_detection) from Hugging Face
+You can download the [llm_anthro_detection model](https://huggingface.co/jc-cl-cg/llm_anthro_detection) from Hugging Face.
 
 ## Development
 

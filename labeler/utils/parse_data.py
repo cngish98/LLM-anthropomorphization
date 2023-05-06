@@ -5,7 +5,12 @@ from nltk import tokenize
 
 
 class TextSplitter:
+    """Split text data by sentence."""
+
     def __init__(self, full_dict):
+        """
+        :param full_dict: dictionary containing each document with its id and sentence
+        """
         self.full_dict = full_dict
 
     def split_into_sentences(self):

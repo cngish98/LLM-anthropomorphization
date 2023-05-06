@@ -13,7 +13,7 @@ sentences as either anthropomorphic or not.
 
 There is a rudimentary rule-based baseline model and a fine-tuned BERT-based model. While the code for the model is
 included in the package, it is likely you will need additional compute to run the modeling. The colab notebook is
-included to run the model in Google Colab. 
+included to run the model in Google Colab. The fine-tuned model is hosted on Hugging Face's website for sentence checking. 
 
 You can download the [llm_anthro_detection model](https://huggingface.co/jc-cl-cg/llm_anthro_detection) from Hugging Face.
 
@@ -68,3 +68,8 @@ write the baseline labeled output to csv.
 ```commandline
 python main.py -d ../../../llm-data/labeled-data/ -p baseline
 ```
+
+## Architecture
+![architecture diagram](llm-anthro-architecture.drawio.png)
+
+editable link: https://drive.google.com/file/d/1tKZ5nE8fUW5WPYzKtyIoeKjDIkxWm7Mk/view?usp=sharing

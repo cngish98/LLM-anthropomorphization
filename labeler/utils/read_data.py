@@ -10,6 +10,9 @@ from lxml import etree
 
 
 class XMLFormatter:
+    """Extract id, url, source, source type, authors, title,
+    date, description, and main text from each XML file"""
+
     def __init__(self, data_dir):
         """
 

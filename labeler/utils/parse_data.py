@@ -14,6 +14,10 @@ class TextSplitter:
         self.full_dict = full_dict
 
     def split_into_sentences(self):
+        """ Split text body data into sentences.
+
+        :return: list of dictionaries of each document
+        """
         text = tokenize.sent_tokenize(self.full_dict["resolved_text"])
 
         split_documents = []

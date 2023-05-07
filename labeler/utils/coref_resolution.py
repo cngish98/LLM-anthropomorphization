@@ -1,4 +1,4 @@
-"""Coreference resolution to assist hand-labeling data individual sentences.
+"""Coreference resolution to assist hand-labeling data as individual sentences.
 
 LingMessCoref is a more accurate coreference resolution implementation,
 but it takes much longer to run.

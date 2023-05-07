@@ -12,6 +12,11 @@ class ExportCSV:
         self.df = df
 
     def write_df_to_csv(self, filename):
+        """
+
+        :param filename: csv file name
+        :return: csv file with text and label columns
+        """
         file = open(f"{filename}.csv", "w")
         writer = csv.writer(file)
         writer.writerow(["text", "label"])

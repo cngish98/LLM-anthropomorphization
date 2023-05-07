@@ -1,8 +1,12 @@
 # LLM Anthropomorphization
 
-LING 472 / ANLY 521 Final Project | Spring 2023
+LING-472 / ANLY-521 Final Project | Georgetown University | Spring 2023
 
-[Jess Cusi](https://github.com/jessicacusi), [Caroline Gish](https://github.com/cngish98), [Cindy Li](https://github.com/cjlicjli)
+**Developers:**
+
+- [Jess Cusi](https://github.com/jessicacusi) *jdc286@georgetown.edu*
+- [Caroline Gish](https://github.com/cngish98) *cng38@georgetown.edu*
+- [Cindy Li](https://github.com/cjlicjli) *cl1579@georgetown.edu*
 
 ## Background
 
@@ -21,7 +25,7 @@ You can download the [llm_anthro_detection model](https://huggingface.co/jc-cl-c
 
 ### Set up & Installation
 
-To install packages:
+To install required packages:
 
 ```commandline
 conda env create --name llm --file environment.yml 
@@ -36,7 +40,7 @@ conda env export > environment.yml --no-builds
 To install the project:
 
 ```
-pip install -e .
+pip install .
 ```
 
 ### Formatting
@@ -46,7 +50,7 @@ Code is formatted with `black`.
 ## Data
 
 For information about the data we used and how to retrieve it yourself, see [scraper](/scraper). The paths provided
-assume your data directory is on the same level as llm-anthropomorphization. If your data is stored elsewhere, make sure
+assume your data directory is on the same level as LLM-anthropomorphization. If your data is stored elsewhere, make sure
 to adjust the path.
 
 ## Running the Project

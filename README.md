@@ -4,9 +4,9 @@ LING-472 / ANLY-521 Final Project | Georgetown University | Spring 2023
 
 **Developers:**
 
-- [Jess Cusi](https://github.com/jessicacusi) *jdc286@georgetown.edu*
-- [Caroline Gish](https://github.com/cngish98) *cng38@georgetown.edu*
-- [Cindy Li](https://github.com/cjlicjli) *cl1579@georgetown.edu*
+- [Jess Cusi](https://github.com/jessicacusi) - *jdc286@georgetown.edu*
+- [Caroline Gish](https://github.com/cngish98) - *cng38@georgetown.edu*
+- [Cindy Li](https://github.com/cjlicjli) - *cl1579@georgetown.edu*
 
 ## Background
 

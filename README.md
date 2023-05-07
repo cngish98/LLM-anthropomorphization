@@ -10,7 +10,7 @@ LING-472 / ANLY-521 Final Project | Georgetown University | Spring 2023
 
 ## Background
 
-### [Presentation Slides](https://docs.google.com/presentation/d/1ZHLGu2YBoXJVcdEjcOy1eXtJxd5EY-3f_f3NjuFypEo/edit?usp=sharing)
+### [Presentation Slides](https://drive.google.com/file/d/1reLrh8Bgxj5ZGtiTcaZj2vT3RIDDSI1p/view?usp=sharing)
 
 This project studies the issue of anthropomorphization of large language models and AI by classifiying individual
 sentences as either anthropomorphic or not.

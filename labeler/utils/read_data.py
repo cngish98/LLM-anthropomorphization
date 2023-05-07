@@ -21,6 +21,10 @@ class XMLFormatter:
         self.data_dir = data_dir
 
     def read_xmls(self):
+        """Read XML data and store into list.
+
+        :return: list of dictionaries of each document
+        """
         logging.info(f"Beginning to read in data from {self.data_dir}...")
         text_collection = []
         doc_count = 0

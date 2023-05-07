@@ -1,3 +1,5 @@
+"""Read in data from XML files."""
+
 import logging
 import re
 
@@ -8,7 +10,14 @@ from lxml import etree
 
 
 class XMLFormatter:
+    """Extract id, url, source, source type, authors, title,
+    date, description, and main text from each XML file"""
+
     def __init__(self, data_dir):
+        """
+
+        :param data_dir: genre subdirectory
+        """
         self.data_dir = data_dir
 
     def read_xmls(self):

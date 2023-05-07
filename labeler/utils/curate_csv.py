@@ -1,4 +1,12 @@
-# code that was originally used to pull in XML data and create csv of each sentence
+"""Pulls in XML data and creates csv containing each sentence.
+
+Data was organized into 5 subdirectories by genre: academic, blog,
+news, podcast, and video, all within a LLM-data directory.
+
+For each subdirectory, create a csv file with each line being a resolved
+coreference sentence.
+"""
+
 import csv
 import logging
 

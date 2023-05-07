@@ -1,10 +1,17 @@
-from PassivePySrc import PassivePy
+"""Check sentence passivity.
 
-# library documentation: https://pypi.org/project/PassivePy/
+library documentation: https://pypi.org/project/PassivePy/
+
+"""
+
+from PassivePySrc import PassivePy
 
 
 class PassiveChecker:
     def __init__(self, df):
+        """
+        :param df: pandas dataframe with text and label columns
+        """
         self.df = df
 
     def check_for_passives_df(self):

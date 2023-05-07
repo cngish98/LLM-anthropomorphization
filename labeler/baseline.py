@@ -1,7 +1,5 @@
 import logging
-
 import spacy
-
 from .consts import ANTHROPOMORPHIC_WORDS, MODEL_LEXICON
 
 

@@ -1,0 +1,8 @@
+id,url,source,source_type,authors,title,date,sentence,gold_label
+test-1-s0,url,YouTube,video,['vlogbrothers'],title,2022-12-06,"When Pop Culture Happy Hour host Stephen Thompson watched the Oscars in March, he made a particularly barbed
+
+        comment about a Diane Warren song that was nominated.
+",0
+test-1-s0,url,YouTube,video,['vlogbrothers'],title,2022-12-06,He even told her all about it. ,0
+test-1-s0,url,YouTube,video,['vlogbrothers'],title,2022-12-06, He ate cheese. ,0
+test-1-s0,url,YouTube,video,['vlogbrothers'],title,2022-12-06,ChatGPT sympathized with her frustration. ,1

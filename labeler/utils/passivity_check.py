@@ -10,14 +10,17 @@ from PassivePySrc import PassivePy
 class PassiveChecker:
     def __init__(self, df):
         """
-        :param df: pandas dataframe with (?)
+        :param df: pandas dataframe with sentence, url, source, source_type, authors,
+        title, date, & gold_label
+
         """
         self.df = df
 
     def check_for_passives_df(self):
         """Use PassivePy model to differentiate active versus passive sentences
 
-        :return: dataframe with only text and label columns (?)
+        :return: dataframe with added passive-data columns ('raw_full_passive_count', 'binary_full_passive',
+        'truncated_passive_matches', 'raw_truncated_passive_count', 'binary_truncated_passive')
         """
         passivepy = PassivePy.PassivePyAnalyzer(spacy_model="en_core_web_sm")
 

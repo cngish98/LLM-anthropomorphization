@@ -6,7 +6,7 @@ import csv
 
 class ExportCSV:
     def __init__(self, df):
-        """
+        """Writes a csv file.
         :param df: pandas dataframe with text and label columns
         """
         self.df = df
@@ -15,7 +15,6 @@ class ExportCSV:
         """
 
         :param filename: csv file name
-        :return: csv file with text and label columns
         """
         file = open(f"{filename}.csv", "w")
         writer = csv.writer(file)

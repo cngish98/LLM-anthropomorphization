@@ -1,3 +1,6 @@
+"""Web scraper for data collection."""
+
+
 import argparse
 
 import newspaper

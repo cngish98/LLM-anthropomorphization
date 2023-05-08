@@ -14,7 +14,7 @@ class TextSplitter:
         self.full_dict = full_dict
 
     def split_into_sentences(self):
-        """ Split text body data into sentences.
+        """Split text body data into sentences.
 
         :return: list of dictionaries of each document
         """

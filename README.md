@@ -17,7 +17,8 @@ sentences as either anthropomorphic or not.
 
 There is a rudimentary rule-based baseline model and a fine-tuned BERT-based model. If this were to be a full package,
 the modeling code would be incorporated into main.py. However, since additional compute is required, the colab notebook
-that we used in Google Colab is included in the repo instead. The fine-tuned model is hosted on Hugging Face's website for sentence
+that we used in Google Colab is included in the repo instead. The fine-tuned model is hosted on Hugging Face's website
+for sentence
 checking.
 
 You can download the fine-tuned [llm_anthro_detection model](https://huggingface.co/jc-cl-cg/llm_anthro_detection) from
@@ -72,8 +73,7 @@ python main.py --data <data> --process <baseline,model> --export
 
 - [required] `data` is the location of your data files
 - [required] `process` indicates whether you want to run the baseline labeler or model labeler. for the model labeler,
-  baseline is
-  still run fgit irst.
+  baseline is still run first.
 - [optional] `export` will write baseline output to csv
 
 For example, this command runs the baseline labeler against the labeled data in our private repository and will not

@@ -114,35 +114,6 @@ if __name__ == "__main__":
         logging.info("No export required, process complete")
 
     elif process == "model":
-        logging.info("Running model predictions...")
-        train, test = train_test_split(all_sentences_df, test_size=0.2)
+        logging.info("Run notebook on colab for model prediction")
 
-        all_sentences = all_sentences[["sentence", "gold_label"]]
-        all_sentences = all_sentences.dropna()
-        all_sentences = all_sentences.rename(
-            columns={"sentence": "text", "gold_label": "label"}
-        )
-        len_all = len(all_sentences)
-        logging.info(f"Number of sentences: {len_all}")
 
-        len_1s = len(all_sentences[all_sentences["label"] == 1])
-        len_0s = len(all_sentences[all_sentences["label"] == 0])
-        logging.info(f"1s in All: {len_1s}")
-        logging.info(f"0s in All: {len_0s}")
-        logging.info(f"1s in Train: {len(train[train['label'] == 1])}")
-        logging.info(f"0s in Train: {len(train[train['label'] == 0])}")
-
-        train.to_csv("gold_train.csv", index=False)
-        logging.info(f"Number of train sentences: {len(train)}")
-
-        test.to_csv("gold_test.csv", index=False)
-        logging.info(f"Number of test sentences: {len(test)}")
-
-        weight_for_0 = (1 / len_0s) * (len_all / 2.0)
-        weight_for_1 = (1 / len_1s) * (len_all / 2.0)
-
-        class_weight = {0: weight_for_0, 1: weight_for_1}
-
-        # model - scores
-        # evaluation
-        pass

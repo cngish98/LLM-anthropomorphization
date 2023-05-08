@@ -5,8 +5,6 @@ import os
 
 import pandas as pd
 
-from sklearn.model_selection import train_test_split
-
 from labeler.baseline import AnthropomorphizationAnalyzer
 from labeler.utils.export_csv import ExportCSV
 from labeler.utils.get_metrics import Metrics
@@ -115,5 +113,3 @@ if __name__ == "__main__":
 
     elif process == "model":
         logging.info("Run notebook on colab for model prediction")
-
-

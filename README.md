@@ -23,6 +23,14 @@ checking.
 You can download the fine-tuned [llm_anthro_detection model](https://huggingface.co/jc-cl-cg/llm_anthro_detection) from
 Hugging Face.
 
+### Demo of final anthropomorphization detection model
+
+(hosted on Hugging Face)
+
+![architecture diagram](images/demo.png)
+
+LABEL_1 (anthropomorphic) was given to the input sentence *Where AI unexpectedly teaches itself a new skill*
+
 ## Development
 
 ### Set up & Installation
@@ -77,6 +85,6 @@ python main.py -d ../../../llm-data/labeled-data/ -p baseline
 
 ## Architecture
 
-![architecture diagram](llm-anthro-architecture.drawio.png)
+![architecture diagram](images/llm-anthro-architecture.drawio.png)
 
 editable link: https://drive.google.com/file/d/1tKZ5nE8fUW5WPYzKtyIoeKjDIkxWm7Mk/view?usp=sharing

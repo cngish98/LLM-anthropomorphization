@@ -28,7 +28,7 @@ Newspaper has a known issue where for many news sites, it seems to only pick up 
 article:
 https://github.com/codelucas/newspaper/issues/645
 
-I wasn't able to get a quick solution & the forked repo changes didn't seem to work for me, so the workaround is to
+We weren't able to get a quick solution & the forked repo changes didn't seem to work for us, so the workaround is to
 copy & paste the full body of the article, drop it in a txt document, and overwrite the `main_text` that way.
 
 run with
